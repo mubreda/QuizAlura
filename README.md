@@ -1,78 +1,57 @@
-# Example app with styled-components
+Veja a demonstração.
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+# 💻 Sobre o projeto
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+A aplicação desenvolvida é um quiz principal e uma lista de alguns outros desafios interessantes de outros participantes.
 
-## Deploy your own
+O projeto foi desenvolvido durante o evento Imersão React e Next.js - V2 da Alura, com o objetivo de criar uma aplicação web com React e Next.JS, em 5 aulas.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Para o desenvolvimento utilizamos ReactJS , NextJS e JavaScript.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+# ⚙️ Funcionalidades
 
-## How to use
+Foi criado um arquivo db.json para simular uma API, além de utilizar a funcionalidade de api do Next.js para servir esse arquivo para que outros usuários possam ter acesso.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Na tela inicial o usuário deve informar seu nome para poder jogar o quiz, além de poder selecionar se quer jogar o tema principal ou selecionar um outro na lista de quiz da galera.
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
+
+# 🚀 Como executar o projeto
+
+Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: Git, Node.js. Além disto é bom ter um editor para trabalhar com o código como VSCode.
+
+# 🧭 Rodando a aplicação
 ```
+# Clone este repositório
+$ git clone git@github.com:mubreda/projetobreda.git
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-### Try it on CodeSandbox
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd projetobreda
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+# Instale as dependências
+$ npm install
+# ou
+$ yarn
 
-### Notes
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+# ou
+$ yarn dev
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
-
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
+# 🛠 Tecnologias
 
-**pages/index.js**
+As seguintes ferramentas foram usadas na construção do projeto:
 
-```javascript
-import StyledLink from '../components/StyledLink'
+## Aplicação ([React](https://reactjs.org/) + [Next.js](https://nextjs.org/) + [JavaScript](https://www.javascript.com/))
+- [Styled Components](https://styled-components.com/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+## Utilitários
 
-</details>
+- Editor: [Visual Studio Code](https://code.visualstudio.com/)
+- Fonte: [LottieFiles](https://lottiefiles.com/)
+- Hospedagem: [Vercel](https://vercel.com/dashboard)
