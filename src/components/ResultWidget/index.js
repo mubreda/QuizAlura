@@ -1,43 +1,32 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable react/prop-types */
+import { useRouter } from 'next/router';
 import React from 'react';
 import Widget from '../Widget';
 import BackLinkArrow from '../BackLinkArrow';
+import db from '../../../db.json';
 
-export default function ResultWidget(results) {
+export default function ResultWidget({ results }) {
+  const router = useRouter();
+  const playerName = router.query.name;
+
+  const numberOfCorrectAnswers = results.filter((x) => x).length;
+
   return (
     <Widget>
       <Widget.Header>
         <BackLinkArrow href="/" />
-      </Widget.Header>
-      <Widget.Header>
-        Tela de Resultado:
+        Inicio
       </Widget.Header>
 
       <Widget.Content>
-        <p>
-          Você acertou
-          {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-              return somatoriaAtual + 1;
-            }
-            return somatoriaAtual;
-          }, 0)} */}
-          {results.filter((x) => x).length}
-          {' '}
-          perguntas
-        </p>
+        <h3>{`Parabéns ${playerName}, você finalizou o quiz "${db.title}"`}</h3>
+        <p>{`No total, você acertou ${numberOfCorrectAnswers} perguntas`}</p>
         <ul>
           {results.map((result, index) => (
             <li key={`result__${result}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
+              {`# ${index + 1} -- `}
+              {`${result ? 'Acertou :)' : 'Errou :('}`}
             </li>
           ))}
         </ul>

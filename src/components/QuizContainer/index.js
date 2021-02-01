@@ -1,10 +1,6 @@
 /* eslint-disable linebreak-style */
 import styled from 'styled-components';
 
-// export const CorrectAnswer = styled.button`
-//   color: ${({ theme }) => theme.colors.contrastText};
-// `;
-
 const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;

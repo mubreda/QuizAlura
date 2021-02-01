@@ -1,42 +1,137 @@
 {
-    "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://www.pixelstalk.net/wp-content/uploads/2016/10/Disney-Wallpaper-Tumblr.jpg",
+    "title": "Disney Quiz",
+    "description": "Vamos testar seus conhecimentos e verificar se você realmente conhece as animações da Disney?",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06cb0ac5-9e48-4090-a66d-c360f517080e/d61ne2w-45909377-9bd8-4901-9ccd-12c2b7d29909.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMDZjYjBhYzUtOWU0OC00MDkwLWE2NmQtYzM2MGY1MTcwODBlXC9kNjFuZTJ3LTQ1OTA5Mzc3LTliZDgtNDkwMS05Y2NkLTEyYzJiN2QyOTkwOS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.50sUrlacog9vPJiWyz_GzQ-I6X0_ZIuAMLTaZWQxBck",
+        "title": "Qual foi o primeiro filme de animação lançado pela Disney?",
+        "description": " ",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Branca de Neve e os 7 anões",
+          "Pinóquio",
+          "Dumbo",
+          "Fantasia"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://img.quizur.com/f/img5d2899d95c75e8.26667652.jpg?lastEdited=1562941918",
+        "title": "A qual animação da Disney pertence esta imagem?",
+        "description": "               ",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "A Princesa e o sapo",
+           "Tarzan",
+           "Pocahontas",
+           "A Pequena Sereia"
+        ]
+      },
+      {
+        "image": "https://media1.tenor.com/images/cc159eaba4a697b834871d889fd17665/tenor.gif",
+        "title": "'A FLOR QUE DESABROCHA NA ADVERSIDADE É A MAIS RARA E BELA DE TODAS.'",
+        "description": "A que filme pertence a frase a cima?",
+        "answer": 2,
+        "alternatives": [
+           "Cinderela",
+           "A Bela e a Fera",
+           "Mulan",
+           "A Princesa e o Sapo"
+        ]
+      },
+      {
+        "image": "https://sm.ign.com/t/ign_br/news/h/hercules-d/hercules-disney-live-action-remake-in-development-with-russo_663w.h960.jpg",
+        "title": "Em que ano foi lançado o filme Hércules?",
+        "description": "   ",
+        "answer": 3,
+        "alternatives": [
+           "1999",
+           "1996",
+           "1998",
+           "1997"
+        ]
+      },
+      {
+        "image": "https://img.quizur.com/f/img5d28a53ccee115.50382227.jpg?lastEdited=1562944835",
+        "title": "Qual trecho da musica referente a imagem a cima está correto?",
+        "description": " ",
+        "answer": 1,
+        "alternatives": [
+           "O meu tesouro é maravilhoso, tudo que eu tenho é tão precioso, por isso eu posso dizer,sim, tenho tudo aqui",
+           "O meu tesouro é tão precioso, tudo que eu tenho é maravilhoso por isso eu posso dizer, sim, tenho tudo aqui"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/90/d8/e9/90d8e9c73d67d5b13f998969875a42b4.gif",
+        "title": "'SE NÃO SOUBER DIZER UMA COISA AGRADÁVEL... ENTÃO NÃO DIGA NADA.'",
+        "description": "A que filme pertence a frase a cima?",
+        "answer": 3,
+        "alternatives": [
+           "Mary Poppins",
+           "A Bela e a Fera",
+           "A Bela Adormecida",
+           "Bambi"
+        ]
+      },
+      {
+        "image": "https://todateen.uol.com.br/wp-content/uploads/2019/01/a-bela-e-a-fera.jpg",
+        "title": "O filme da Bela e a Fera está guardado na Biblioteca dos EUA, por ser considerado patrimônio cultural. Está afirmação é...",
+        "description": "A que filme pertence a frase a cima?",
+        "answer": 0,
+        "alternatives": [
+           "Verdadeira",
+           "Falsa"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/e6/b7/42/e6b7427869603906db79dc6a2be63966.gif",
+        "title": "Qual o trecho da musica referente a imagem a cima está correto?",
+        "description": " ",
+        "answer": 2,
+        "alternatives": [
+           "Quem ama a razão rejeita",
+           "O verbo amar me rejeita",
+           "O Verbo amar a razão rejeita",
+           "Ser amado é moleza"
+        ]
+      },
+      {
+        "image": "https://media1.tenor.com/images/d198e9766bd5382a9a414b41049250c9/tenor.gif",
+        "title": "'PREFIRO MORRER AMANHÃ DO QUE VIVER CEM ANOS SEM TER TE CONHECIDO.'",
+        "description": "A que filme pertence a frase a cima?",
+        "answer": 1,
+        "alternatives": [
+           "Pinóquio",
+           "Pocahontas",
+           "Enrolados",
+           "Hércules"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/b7/5a/aa/b75aaafbc11dbbf6202dbfaa62740000.gif",
+        "title": "'O que é que ele esconde, e não quer revelar?' ...",
+        "description": "Complete a música",
+        "answer": 0,
+        "alternatives": [
+           "Pois dentro dele um rei existe mas que não quer mostrar",
+           "O que me aconteceu não vou contar senão vai me deixar"
         ]
       }
     ],
     "external": [
-      ""
+      "https://flash-quiz-next.davidlpc1.vercel.app",
+      "https://dark-quiz.azotief.vercel.app/",
+      "https://aluraquiz-base.renatofrancisco.vercel.app/"
     ],
+
     "theme": {
       "colors": {
-        "primary": "#0d47a1",
-        "secondary": "#29b6f6",
-        "mainBg": "#171B35",
+        "primary": "#746bab",
+        "secondary": "#fbbe4f",
+        "mainBg": "#746bab",
         "contrastText": "#FFFFFF",
-        "wrong": "#FF5722",
-        "success": "#4CAF50"
+        "wrong": "#ff8787",
+        "success": "#1ab28a"
       },
       "borderRadius": "4px"
     }

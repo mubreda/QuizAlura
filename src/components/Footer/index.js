@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 // src/components/Footer/index.js
 const FooterWrapper = styled.footer`
-background-color: #00000070;
+  background-color: #00000070;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@ background-color: #00000070;
     transition: .3s;
     &:hover,
     &:focus {
-      opacity: .5;
+       opacity: .5;
     }
     span {
       text-decoration: underline;

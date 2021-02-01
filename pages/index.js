@@ -14,13 +14,6 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 
-// const BackgroundImage = styled.div`
-//   background-image: url(${db.bg});
-//   flex: 1;
-//   background-size: cover;
-//   background-position: center;
-// `;
-
 const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
@@ -35,6 +28,7 @@ const QuizContainer = styled.div`
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+  const filledName = name.length > 0;
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -45,16 +39,7 @@ export default function Home() {
         </title>
       </Head>
       <QuizContainer>
-        <QuizLogo
-          // as={motion.section}
-          // transition={{ duration: 1 }}
-          // variants={{
-          //   show: { opacity: 1, scale: 1 },
-          //   hidden: { opacity: 0.5, scale: 0.5 },
-          // }}
-          // initial="hidden"
-          // animate="show"
-        />
+        <QuizLogo />
 
         <Widget
           as={motion.section}
@@ -70,6 +55,8 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
+            <h2>{db.description}</h2>
+            <br />
             {/* Evento pra evitar que o subnite faça o
              comportamento padrao que seria recarregar a pagina */}
             <form onSubmit={(infosDoEvento) => {
@@ -87,7 +74,7 @@ export default function Home() {
                 placeholder="Diz ai seu nome"
                 value={name}
               />
-              <Button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={!filledName}>
                 Jogar
                 {/* `Jogar ${name}` */}
               </Button>
@@ -105,9 +92,10 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          <Widget.Content>
+          <Widget.Header>
             <h1>Quizes da Galera</h1>
-
+          </Widget.Header>
+          <Widget.Content>
             <ul>
               {db.external.map((linkExterno) => {
                 const [projectName, githubUser] = linkExterno
@@ -120,7 +108,8 @@ export default function Home() {
                   <li key={linkExterno}>
                     <Widget.Topic
                       as={Link}
-                      href={`/quiz/${projectName}___${githubUser}`}
+                      href={filledName ? `/quiz/${projectName}___${githubUser}` : '/'}
+                      style={{ opacity: filledName ? 'unset' : 0.5, cursor: filledName ? 'pointer' : 'not-allowed' }}
                     >
                       {`${githubUser}/${projectName}`}
                     </Widget.Topic>
@@ -141,7 +130,7 @@ export default function Home() {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/omariosouto" />
+      <GitHubCorner projectUrl="https://github.com/mubreda" />
     </QuizBackground>
   );
 }

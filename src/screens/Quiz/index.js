@@ -1,8 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { useRouter } from 'next/router';
-// import { Lottie } from '@crello/react-lottie';
+import { Lottie } from '@crello/react-lottie';
 // import db from '../../../db.json';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
@@ -12,78 +11,9 @@ import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import BackLinkArrow from '../../components/BackLinkArrow';
 import { AnswerContainer, CorrectAnswer, WrongAnswer } from '../../components/Feedback';
-// import ResultWidget from '../../components/ResultWidget';
+import ResultWidget from '../../components/ResultWidget';
 
-// import loadingAnimation from './animations/loading.json';
-
-// function ResultWidget({ results }) {
-//   return (
-//     <Widget>
-//       <Widget.Header>
-//         Tela de Resultado:
-//       </Widget.Header>
-
-//       <Widget.Content>
-//         <p>
-//           Você acertou
-//           {' '}
-//           {/* {results.reduce((somatoriaAtual, resultAtual) => {
-//             const isAcerto = resultAtual === true;
-//             if (isAcerto) {
-//               return somatoriaAtual + 1;
-//             }
-//             return somatoriaAtual;
-//           }, 0)} */}
-//           {results.filter((x) => x).length}
-//           {' '}
-//           perguntas
-//         </p>
-//         <ul>
-//           {results.map((result, index) => (
-//             <li key={`result__${result}`}>
-//               #
-//               {index + 1}
-//               {' '}
-//               Resultado:
-//               {result === true
-//                 ? 'Acertou'
-//                 : 'Errou'}
-//             </li>
-//           ))}
-//         </ul>
-//       </Widget.Content>
-//     </Widget>
-//   );
-// }
-
-function ResultWidget({ results }) {
-  const router = useRouter();
-  const playerName = router.query.name;
-
-  const numberOfCorrectAnswers = results.filter((x) => x).length;
-
-  return (
-    <Widget>
-      <Widget.Header>
-        <BackLinkArrow href="/" />
-        Inicio
-      </Widget.Header>
-
-      <Widget.Content>
-        <p>{`Parabéns ${playerName}, você finalizou o quiz!`}</p>
-        <p>{`No total, você acertou ${numberOfCorrectAnswers} perguntas`}</p>
-        <ul>
-          {results.map((result, index) => (
-            <li key={`result__${result}`}>
-              {`# ${index + 1} Resultado: `}
-              {`${result ? 'Correto!!' : 'Errado :('}`}
-            </li>
-          ))}
-        </ul>
-      </Widget.Content>
-    </Widget>
-  );
-}
+import loadingAnimation from './animations/loading.json';
 
 function LoadingWidget() {
   return (
@@ -93,12 +23,12 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content style={{ display: 'flex', justifyContent: 'center' }}>
-        {/* <Lottie
+        <Lottie
           width="200px"
           height="200px"
           className="lottie-container basic"
           config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
-        /> */}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -158,6 +88,7 @@ function QuestionWidget({
             infosDoEvento.preventDefault();
             setIsQuestionSubmited(true);
             addResult(isCorrect);
+            // Parte em que fazia mudar sozinho de questão
             // setTimeout(() => {
             //   addResult(isCorrect);
             //   onSubmit();
@@ -194,9 +125,6 @@ function QuestionWidget({
             );
           })}
 
-          {/* <pre>
-            {JSON.stringify(question, null, 4)}
-          </pre>  type="submit"    disabled={!hasAlternativeSelected} */}
           <Button // Pq ele ta chamadno onSubmit?
             disabled={!hasAlternativeSelected || isQuestionSubmited}
           >
@@ -211,7 +139,7 @@ function QuestionWidget({
             }}
             disabled={!isQuestionSubmited}
           >
-            Próximo
+            {questionIndex + 1 < totalQuestions ? 'Próximo' : 'Finalizar'}
           </Button>
         </AlternativesForm>
       </Widget.Content>
@@ -234,7 +162,6 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   const bg = externalBg;
 
   function addResult(result) {
-    // results.push(result);
     setResults([
       ...results,
       result,
@@ -271,7 +198,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
             question={question}
             questionIndex={questionIndex}
             totalQuestions={totalQuestions}
-            // onSubmit={null}
+            // onSubmit={handleSubmitQuiz}
             nextQuestion={handleSubmitQuiz}
             addResult={addResult}
           />
