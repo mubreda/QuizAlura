@@ -1,8 +1,7 @@
 ### Veja a demonstração [AQUI](https://projetobreda-git-main.mubreda.vercel.app/)
 
-<img src="https://drive.google.com/file/d/1IwFxTgsXq5Ex2xk3S1U70MpxgUSVaQu4/view">
+<img src="https://lh5.googleusercontent.com/MBTNR-b8H2TJLbA6A9t62FHou0L2Cifmbo2bPbnQsGxsvJEevp2zvsQgTzq416Xi5daT79qBdTQEYUWawtpf=w1920-h937-rw">
 
- ![](https://drive.google.com/file/d/1IwFxTgsXq5Ex2xk3S1U70MpxgUSVaQu4/view)
 
 # 💻 Sobre o projeto
 
