@@ -27,11 +27,11 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 # 🧭 Rodando a aplicação
 ```
 # Clone este repositório
-$ git clone git@github.com:mubreda/projetobreda.git
+$ git clone git@github.com:mubreda/QuizAlura.git
 
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd projetobreda
+$ cd QuizAlura
 
 # Instale as dependências
 $ npm install
