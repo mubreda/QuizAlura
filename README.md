@@ -2,6 +2,8 @@
 
 <img src="https://drive.google.com/file/d/1IwFxTgsXq5Ex2xk3S1U70MpxgUSVaQu4/view">
 
+ ![](https://drive.google.com/file/d/1IwFxTgsXq5Ex2xk3S1U70MpxgUSVaQu4/view)
+
 # 💻 Sobre o projeto
 
 A aplicação desenvolvida é um quiz principal e uma lista de alguns outros desafios interessantes de outros participantes.
