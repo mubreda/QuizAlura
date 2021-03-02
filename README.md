@@ -1,6 +1,6 @@
 ### Veja a demonstração [AQUI](https://projetobreda-git-main.mubreda.vercel.app/)
 
-<img src="https://lh5.googleusercontent.com/Dnk0tt8uAGrXdJbN8iMcMo3-ml4Xuj3P9eCjzNPLSfieXi3OMgS-SCz0EZzaciLpx9uW_jcJm-gMrvm0Nqy0=w1920-h937-rw">
+<img src="https://github.com/mubreda/QuizAlura/blob/main/src/Quiz.jpg">
 
 
 # 💻 Sobre o projeto
